@@ -19,7 +19,7 @@ public class shooting : MonoBehaviour
     {
       if(Ctime >= frequency)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space))
             {
                 GameObject clone = Instantiate(Projectil, barrel.position, barrel.rotation);
                 Destroy(clone, 3);
