@@ -1,21 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class health : MonoBehaviour
 {
     public float overallhealth = 10;
     private float currenthealth;
+    public Image healthbar;
     // Start is called before the first frame update
     void Start()
     {
         currenthealth = overallhealth;
+        if (healthbar != null)
+        {
+            healthbar.fillAmount = currenthealth / overallhealth;
+        }
     }
 
     public void takedamage(float damage)
     {
         currenthealth = currenthealth - damage;
-        if(currenthealth <= 0)
+        if (healthbar != null)
+        {
+            healthbar.fillAmount = currenthealth / overallhealth;
+        }
+        if (currenthealth <= 0)
         {
             Destroy(gameObject);
         }
