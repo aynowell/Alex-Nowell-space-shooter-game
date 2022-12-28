@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b08c5d96c4baad47881738dd2ad0a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 31166438634605683, guid: a7c68216314e45141b1d1b767a5f4033, type: 3}
 --- !u!4 &442865485
 Transform:
   m_ObjectHideFlags: 0
@@ -741,7 +742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectil: {fileID: 6805394272232576419, guid: be7185ae8ee62b0499bc72f92aef2024, type: 3}
   barrel: {fileID: 796459701}
-  frequency: 0.01
+  frequency: 1e-40
 --- !u!50 &1037529838
 Rigidbody2D:
   serializedVersion: 4
