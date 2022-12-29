@@ -25,8 +25,8 @@ public class gamemanager : MonoBehaviour
 		{
 			nextEnemy = enemyRate;
 			enemyRate *= 0.9f;
-			if (enemyRate < 2)
-				enemyRate = 2;
+			if (enemyRate < 1)
+				enemyRate = 1;
 
 			Vector3 offset = Random.onUnitSphere;
 
