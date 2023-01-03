@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class health : MonoBehaviour
 {
@@ -27,7 +28,14 @@ public class health : MonoBehaviour
         }
         if (currenthealth <= 0)
         {
+
+            if (tag == "Player") {
+
+                SceneManager.LoadScene("the you loose screen");
+            }
             Destroy(gameObject);
+
+
         }
     }
 

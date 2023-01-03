@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/game.unity
     guid: 515a4340dd3b38b4090d59acba4961fd
+  - enabled: 1
+    path: Assets/the you loose screen.unity
+    guid: b5bb1b0800be4e0428e1f5ce4446c375
+  - enabled: 1
+    path: Assets/The you won screen.unity
+    guid: c07537c802c40d64092883ed937be7d7
   m_configObjects: {}

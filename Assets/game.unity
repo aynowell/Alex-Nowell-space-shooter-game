@@ -741,7 +741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   Fire: {fileID: 923244296}
-  rotspeed: 1000
+  rotspeed: 500
   shipBoundaryRadius: 0.5
 --- !u!212 &1037529835
 SpriteRenderer:
