@@ -28,7 +28,10 @@ public class health : MonoBehaviour
         }
         if (currenthealth <= 0)
         {
-
+            if (tag == "boss")
+            {
+                SceneManager.LoadScene("the you won screen");
+            }
             if (tag == "Player") {
 
                 SceneManager.LoadScene("the you loose screen");
@@ -41,19 +44,27 @@ public class health : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(tag == "Enemy")
+        if(tag == "Enemy" || tag == "boss")
         {
-            if (collision.gameObject.CompareTag("Player"))
+            if (collision.gameObject.CompareTag("Bullet"))
             {
                 takedamage(1);
+                Destroy(collision.gameObject);
             }
+
         }
+
+
 
         if (tag == "Player")
         {
             if (collision.gameObject.CompareTag("Enemy"))
             {
                 takedamage(1);
+            }
+            if (collision.gameObject.CompareTag("boss"))
+            {
+                takedamage(3);
             }
         }
     }

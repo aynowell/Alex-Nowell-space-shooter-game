@@ -826,7 +826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectil: {fileID: 6805394272232576419, guid: be7185ae8ee62b0499bc72f92aef2024, type: 3}
   barrel: {fileID: 796459701}
-  frequency: 0.001
+  frequency: 0.01
 --- !u!50 &1037529838
 Rigidbody2D:
   serializedVersion: 4
@@ -973,7 +973,7 @@ GameObject:
   - component: {fileID: 1971441843}
   m_Layer: 0
   m_Name: Alex's boss
-  m_TagString: Enemy
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -990,7 +990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df0ab693809c484cb1a2bb35c4140dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overallhealth: 10
+  overallhealth: 30
   healthbar: {fileID: 0}
 --- !u!50 &1971441844
 Rigidbody2D:
@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71ec0b2c5dc8274b80bb0ddb64952b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 7
 --- !u!212 &1971441848
 SpriteRenderer:
   m_ObjectHideFlags: 0

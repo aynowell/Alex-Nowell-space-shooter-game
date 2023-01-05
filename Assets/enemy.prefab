@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e7e0efc2b0391418e2f54695da429c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 90
+  rotSpeed: 50
 --- !u!114 &31166438634605687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71ec0b2c5dc8274b80bb0ddb64952b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 3
 --- !u!61 &31166438634605685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -174,4 +174,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df0ab693809c484cb1a2bb35c4140dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overallhealth: 5
+  overallhealth: 7
+  healthbar: {fileID: 0}
