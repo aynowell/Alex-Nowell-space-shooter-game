@@ -9,9 +9,11 @@ public class health : MonoBehaviour
     public float overallhealth = 10;
     private float currenthealth;
     public Image healthbar;
+    public gamemanager GM;
     // Start is called before the first frame update
     void Start()
     {
+        GM = GameObject.Find("manager").GetComponent<gamemanager>();
         currenthealth = overallhealth;
         if (healthbar != null)
         {
@@ -28,6 +30,11 @@ public class health : MonoBehaviour
         }
         if (currenthealth <= 0)
         {
+            if (tag == "Enemy" || tag == "boss")
+            {
+                GM.enemieskilled += 1;
+             
+            }
             if (tag == "boss")
             {
                 SceneManager.LoadScene("the you won screen");
@@ -50,6 +57,8 @@ public class health : MonoBehaviour
             {
                 takedamage(1);
                 Destroy(collision.gameObject);
+
+
             }
 
         }
