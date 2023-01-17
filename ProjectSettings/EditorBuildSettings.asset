@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/The you won screen.unity
     guid: c07537c802c40d64092883ed937be7d7
+  - enabled: 1
+    path: Assets/shop scene.unity
+    guid: f55f7f9cba0aca049ae26836e4ffa98b
   m_configObjects: {}

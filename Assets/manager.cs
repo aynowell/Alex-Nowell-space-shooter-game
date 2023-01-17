@@ -8,6 +8,10 @@ public class manager : MonoBehaviour
     {
         SceneManager.LoadScene("Start Screen");
     }
+    public void gotoshop()
+    {
+        SceneManager.LoadScene("shop scene");
+    }
     // Start is called before the first frame update
     void Start()
     {
