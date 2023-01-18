@@ -743,7 +743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   Fire: {fileID: 923244296}
-  rotspeed: 1000
+  rotspeed: 3000
   shipBoundaryRadius: 0.5
 --- !u!212 &1037529835
 SpriteRenderer:
@@ -828,7 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectil: {fileID: 6805394272232576419, guid: be7185ae8ee62b0499bc72f92aef2024, type: 3}
   barrel: {fileID: 796459701}
-  frequency: 0.001
+  frequency: 0.0001
 --- !u!50 &1037529838
 Rigidbody2D:
   serializedVersion: 4

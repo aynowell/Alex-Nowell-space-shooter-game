@@ -41,7 +41,7 @@ public class gamemanager : MonoBehaviour
 			offset.z = 0;
 
 			offset = offset.normalized * spawnDistance;
-			if (enemieskilled == 15)
+			if (enemieskilled == 5)
 			{
 				bossspawned = true;
 
