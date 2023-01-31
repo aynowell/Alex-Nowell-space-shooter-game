@@ -888,7 +888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df0ab693809c484cb1a2bb35c4140dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overallhealth: 10
+  overallhealth: 15
   healthbar: {fileID: 977846672}
   GM: {fileID: 0}
 --- !u!1 &1747794586

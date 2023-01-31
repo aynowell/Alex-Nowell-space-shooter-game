@@ -15,10 +15,12 @@ public class gamemanager : MonoBehaviour
 
 	public int enemieskilled;
 	bool bossspawned;
+	public float money;
 
 
 	private void Start()
 	{
+		money = PlayerPrefs.GetFloat("mula");
 	}
 	// Update is called once per frame
 	void Update()
@@ -32,7 +34,7 @@ public class gamemanager : MonoBehaviour
 		if (nextEnemy <= 0)
 		{
 			nextEnemy = enemyRate;
-			enemyRate *= 0.9f;
+			enemyRate *= 0.1f;
 			if (enemyRate < 1)
 				enemyRate = 1;
 

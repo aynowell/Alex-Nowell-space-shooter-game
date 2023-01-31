@@ -11,19 +11,21 @@ public class updatemoney : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetFloat("mula", 100);
+        money = PlayerPrefs.GetFloat("mula");
+        moneyText.text = "money:" + money.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        money = PlayerPrefs.GetFloat("mula");
-        moneyText.text = "money:" + money.ToString();
+        
     }
 
     public void buy(float amount)
     {
         if (money - amount >= 0) {
             money = money - amount;
+            PlayerPrefs.SetFloat("mula", money);
             moneyText.text = "money:" + money.ToString();
         }
     }
