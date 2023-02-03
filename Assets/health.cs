@@ -33,6 +33,16 @@ public class health : MonoBehaviour
             if (tag == "Enemy" || tag == "boss")
             {
                 GM.enemieskilled += 1;
+                if (tag == "Enemy")
+                {
+                    GM.money += 1;
+                    GM.updateMoney();
+                }
+                else
+                {
+                    GM.money += 5;
+                    GM.updateMoney();
+                }
              
             }
             if (tag == "boss")

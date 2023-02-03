@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class gamemanager : MonoBehaviour
 {
@@ -16,15 +17,23 @@ public class gamemanager : MonoBehaviour
 	public int enemieskilled;
 	bool bossspawned;
 	public float money;
-
+	public TMP_Text moneyText;
 
 	private void Start()
 	{
 		money = PlayerPrefs.GetFloat("mula");
+		moneyText.text = "$" + money.ToString();
 	}
-	// Update is called once per frame
-	void Update()
+
+    public void updateMoney()
+    {
+		moneyText.text = "$" + money.ToString();
+		PlayerPrefs.SetFloat("mula", money);
+	}
+    // Update is called once per frame
+    void Update()
 	{
+		moneyText.text = "$" + money.ToString();
 		if (bossspawned == true)
         {
 			return;
@@ -34,9 +43,9 @@ public class gamemanager : MonoBehaviour
 		if (nextEnemy <= 0)
 		{
 			nextEnemy = enemyRate;
-			enemyRate *= 0.1f;
-			if (enemyRate < 1)
-				enemyRate = 1;
+			enemyRate *= 0.10f;
+			if (enemyRate < 3)
+				enemyRate = 3;
 
 			Vector3 offset = Random.onUnitSphere;
 

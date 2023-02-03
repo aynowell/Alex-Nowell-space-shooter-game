@@ -10,7 +10,7 @@ public class updatemoney : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetFloat("mula", 100);
+        
         money = PlayerPrefs.GetFloat("mula");
         moneyText.text = "money:" + money.ToString();
     }
