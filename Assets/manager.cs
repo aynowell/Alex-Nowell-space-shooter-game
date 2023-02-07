@@ -23,4 +23,24 @@ public class manager : MonoBehaviour
     {
         
     }
+
+    public void buymeteor(){
+        PlayerPrefs.SetBool("metior",true);
+    }
+    public void buyforcefield(){
+        PlayerPrefs.SetBool("force field",true);
+    }
+    public void buyminion(){
+        PlayerPrefs.SetBool("monion",true);
+    }
+    public void buybomb(){
+        PlayerPrefs.SetBool("bomb",true);
+    }
+       public void buygun(){
+        PlayerPrefs.SetBool("gun",true);
+    }
+    public void buysonicboom(){
+        PlayerPrefs.SetBool("sonic boom",true);
+    }
+     
 }
