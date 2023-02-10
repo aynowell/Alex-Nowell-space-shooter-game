@@ -335,7 +335,7 @@ MonoBehaviour:
   bossPrefab: {fileID: 8457991733559823172, guid: 7fe938a352cbaa24eaed6a36d25f703b, type: 3}
   enemieskilled: 0
   money: 0
-  moneyText: {fileID: 0}
+  moneyText: {fileID: 1489628359}
 --- !u!4 &442865485
 Transform:
   m_ObjectHideFlags: 0
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectil: {fileID: 6805394272232576419, guid: be7185ae8ee62b0499bc72f92aef2024, type: 3}
   barrel: {fileID: 796459701}
-  frequency: 0.0001
+  frequency: 0.05
 --- !u!50 &1037529838
 Rigidbody2D:
   serializedVersion: 4

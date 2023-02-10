@@ -25,22 +25,21 @@ public class manager : MonoBehaviour
     }
 
     public void buymeteor(){
-        PlayerPrefs.SetBool("metior",true);
+        PlayerPrefs.SetString("meteor","true");
     }
     public void buyforcefield(){
-        PlayerPrefs.SetBool("force field",true);
+        PlayerPrefs.SetString("force field","true");
     }
     public void buyminion(){
-        PlayerPrefs.SetBool("monion",true);
+        PlayerPrefs.SetString("minion","true");
     }
     public void buybomb(){
-        PlayerPrefs.SetBool("bomb",true);
+        PlayerPrefs.SetString("bomb","true");
     }
        public void buygun(){
-        PlayerPrefs.SetBool("gun",true);
+        PlayerPrefs.SetString("gun","true");
     }
     public void buysonicboom(){
-        PlayerPrefs.SetBool("sonic boom",true);
+        PlayerPrefs.SetString("sonic boom","true");
     }
-     
 }

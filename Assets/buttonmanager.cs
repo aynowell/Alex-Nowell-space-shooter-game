@@ -7,6 +7,12 @@ public class buttonmanager : MonoBehaviour
 {
     public void startgame()
     {
+        PlayerPrefs.SetFloat("mula", 0);
+        SceneManager.LoadScene("game");
+    }
+
+    public void continuegame()
+    {
         SceneManager.LoadScene("game");
     }
     // Start is called before the first frame update

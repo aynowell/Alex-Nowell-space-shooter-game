@@ -19,16 +19,62 @@ public class gamemanager : MonoBehaviour
 	public float money;
 	public TMP_Text moneyText;
 
+
+
+	public GameObject meteor;
+	public GameObject force field;
+	public GameObject minion;
+	public GameObject bomb;
+	public GameObject gun;
+	public GameObject sonic boom;
+
+
+
+
 	private void Start()
 	{
 		money = PlayerPrefs.GetFloat("mula");
 		moneyText.text = "$" + money.ToString();
+
+        if (PlayerPrefs.GetString("meteor") == "true")
+        {
+			PlayerPrefs.SetString("meteor", "false");
+
+        }
+		if (PlayerPrefs.GetString("force field") == "true")
+		{
+			PlayerPrefs.SetString("force field", "false");
+
+		}
+		if (PlayerPrefs.GetString("minion") == "true")
+		{
+			PlayerPrefs.SetString("minion", "false");
+
+		}
+		if (PlayerPrefs.GetString("bomb") == "true")
+		{
+			PlayerPrefs.SetString("bomb", "false");
+
+		}
+		if (PlayerPrefs.GetString("gun") == "true")
+		{
+			PlayerPrefs.SetString("gun", "false");
+
+		}
+		if (PlayerPrefs.GetString("sonic boom") == "true")
+		{
+			PlayerPrefs.SetString("sonic boom", "false");
+
+		}
 	}
 
     public void updateMoney()
     {
 		moneyText.text = "$" + money.ToString();
 		PlayerPrefs.SetFloat("mula", money);
+
+
+		
 	}
     // Update is called once per frame
     void Update()
