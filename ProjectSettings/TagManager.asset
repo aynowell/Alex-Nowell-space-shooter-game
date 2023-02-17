@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - boss
   - Bullet
+  - forcefield
   layers:
   - Default
   - TransparentFX

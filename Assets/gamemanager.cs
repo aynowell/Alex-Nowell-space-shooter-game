@@ -22,11 +22,11 @@ public class gamemanager : MonoBehaviour
 
 
 	public GameObject meteor;
-	public GameObject force field;
+	public GameObject forcefield;
 	public GameObject minion;
 	public GameObject bomb;
 	public GameObject gun;
-	public GameObject sonic boom;
+	public GameObject sonicboom;
 
 
 
@@ -41,9 +41,14 @@ public class gamemanager : MonoBehaviour
 			PlayerPrefs.SetString("meteor", "false");
 
         }
-		if (PlayerPrefs.GetString("force field") == "true")
+		if (PlayerPrefs.GetString("force field") == "false")
 		{
 			PlayerPrefs.SetString("force field", "false");
+			GameObject forcefieldClone = Instantiate(forcefield);
+			Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+			forcefieldClone.transform.SetParent(player);
+			forcefieldClone.transform.localEulerAngles = Vector3.zero;
+			forcefieldClone.transform.localPosition = new Vector3(0.27f, 0.67f,0);
 
 		}
 		if (PlayerPrefs.GetString("minion") == "true")
@@ -98,7 +103,7 @@ public class gamemanager : MonoBehaviour
 			offset.z = 0;
 
 			offset = offset.normalized * spawnDistance;
-			if (enemieskilled == 5)
+			if (enemieskilled % 10 == 0 && enemieskilled != 0)
 			{
 				bossspawned = true;
 

@@ -336,6 +336,12 @@ MonoBehaviour:
   enemieskilled: 0
   money: 0
   moneyText: {fileID: 1489628359}
+  meteor: {fileID: 0}
+  forcefield: {fileID: 5395394600613992982, guid: e7d1a0c3b1a0fcc4383579b52ef458c4, type: 3}
+  minion: {fileID: 0}
+  bomb: {fileID: 0}
+  gun: {fileID: 0}
+  sonicboom: {fileID: 0}
 --- !u!4 &442865485
 Transform:
   m_ObjectHideFlags: 0
@@ -831,7 +837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectil: {fileID: 6805394272232576419, guid: be7185ae8ee62b0499bc72f92aef2024, type: 3}
   barrel: {fileID: 796459701}
-  frequency: 0.05
+  frequency: 0.03
 --- !u!50 &1037529838
 Rigidbody2D:
   serializedVersion: 4

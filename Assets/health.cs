@@ -40,7 +40,7 @@ public class health : MonoBehaviour
                 }
                 else
                 {
-                    GM.money += 5;
+                    GM.money += 10;
                     GM.updateMoney();
                 }
              
@@ -61,6 +61,7 @@ public class health : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         if(tag == "Enemy" || tag == "boss")
         {
             if (collision.gameObject.CompareTag("Bullet"))
@@ -68,6 +69,12 @@ public class health : MonoBehaviour
                 takedamage(1);
                 Destroy(collision.gameObject);
 
+
+            }
+
+            if (collision.gameObject.CompareTag( "forcefield"))
+            {
+                Destroy(gameObject);
 
             }
 
