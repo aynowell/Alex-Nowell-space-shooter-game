@@ -54,6 +54,11 @@ public class gamemanager : MonoBehaviour
 		if (PlayerPrefs.GetString("minion") == "true")
 		{
 			PlayerPrefs.SetString("minion", "false");
+			GameObject minionClone = Instantiate(forcefield);
+			Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+			minionClone.transform.SetParent(player);
+			minionClone.transform.localEulerAngles = Vector3.zero;
+			minionClone.transform.localPosition = new Vector3(0.78f, -0.14f, 0);
 
 		}
 		if (PlayerPrefs.GetString("bomb") == "true")
@@ -63,6 +68,9 @@ public class gamemanager : MonoBehaviour
 		}
 		if (PlayerPrefs.GetString("gun") == "true")
 		{
+
+			GameObject.FindGameObjectWithTag("Player").GetComponent<shooting>().specialshooting = true;
+			GameObject.FindGameObjectWithTag("Player").GetComponent<shooting>().crosshair.SetActive(true);
 			PlayerPrefs.SetString("gun", "false");
 
 		}
