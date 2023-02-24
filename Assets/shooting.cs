@@ -19,11 +19,15 @@ public class shooting : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+
     {
 
-        if (specialshooting) { 
+        if (specialshooting) {
+            crosshair.SetActive(true);
             Vector3 msPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            msPosition.z = 0;
             crosshair.transform.position = msPosition;
+
             Vector3 lookAt = msPosition;
             float angleRad = Mathf.Atan2(lookAt.y - this.transform.position.y, lookAt.x - this.transform.position.x);
             float angleDeg = (180/Mathf.PI)*angleRad;
@@ -45,6 +49,7 @@ public class shooting : MonoBehaviour
         }
         else
         {
+            crosshair.SetActive(false);
             if (Ctime >= frequency)
             {
                 if (Input.GetKey(KeyCode.Space))

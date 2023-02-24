@@ -64,9 +64,13 @@ public class health : MonoBehaviour
         
         if(tag == "Enemy" || tag == "boss")
         {
+            float damage = 1;
+            if (GameObject.FindGameObjectWithTag("Player").GetComponent<shooting>().specialshooting) {
+                damage = 3;
+            }
             if (collision.gameObject.CompareTag("Bullet"))
             {
-                takedamage(1);
+                takedamage(damage);
                 Destroy(collision.gameObject);
 
 

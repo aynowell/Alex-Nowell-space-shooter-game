@@ -27,7 +27,7 @@ public class gamemanager : MonoBehaviour
 	public GameObject bomb;
 	public GameObject gun;
 	public GameObject sonicboom;
-
+	public GameObject crosshair;
 
 
 
@@ -68,9 +68,8 @@ public class gamemanager : MonoBehaviour
 		}
 		if (PlayerPrefs.GetString("gun") == "true")
 		{
-
+			crosshair.SetActive(true);
 			GameObject.FindGameObjectWithTag("Player").GetComponent<shooting>().specialshooting = true;
-			GameObject.FindGameObjectWithTag("Player").GetComponent<shooting>().crosshair.SetActive(true);
 			PlayerPrefs.SetString("gun", "false");
 
 		}
