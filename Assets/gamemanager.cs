@@ -5,7 +5,8 @@ using TMPro;
 
 public class gamemanager : MonoBehaviour
 {
-
+	public AudioClip NormalMusic;
+	public AudioClip BossMusic;
 	public GameObject enemyPrefab;
 	public GameObject bossPrefab;
 
@@ -41,7 +42,7 @@ public class gamemanager : MonoBehaviour
 			PlayerPrefs.SetString("meteor", "false");
 
         }
-		if (PlayerPrefs.GetString("force field") == "false")
+		if (PlayerPrefs.GetString("force field") == "true")
 		{
 			PlayerPrefs.SetString("force field", "false");
 			GameObject forcefieldClone = Instantiate(forcefield);
