@@ -8,6 +8,7 @@ TagManager:
   - boss
   - Bullet
   - forcefield
+  - meteor
   layers:
   - Default
   - TransparentFX

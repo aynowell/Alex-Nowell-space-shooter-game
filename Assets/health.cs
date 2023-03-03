@@ -81,7 +81,11 @@ public class health : MonoBehaviour
                 Destroy(gameObject);
 
             }
+            if (collision.gameObject.CompareTag("meteor"))
+            {
+                takedamage(1000000);
 
+            }
         }
 
 
