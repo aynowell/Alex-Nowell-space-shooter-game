@@ -36,22 +36,45 @@ public class gamemanager : MonoBehaviour
 	{
 		money = PlayerPrefs.GetFloat("mula");
 		moneyText.text = "$" + money.ToString();
-
-        if (PlayerPrefs.GetString("meteor") == "true")
-        {
-			PlayerPrefs.SetString("meteor", "false");
-
-        }
-		if (PlayerPrefs.GetString("force field") == "true")
+	}
+	public void enableGun()
+	{
+		if (PlayerPrefs.GetString("gun") == "true")
 		{
-			PlayerPrefs.SetString("force field", "false");
-			GameObject forcefieldClone = Instantiate(forcefield);
-			Transform player = GameObject.FindGameObjectWithTag("Player").transform;
-			forcefieldClone.transform.SetParent(player);
-			forcefieldClone.transform.localEulerAngles = Vector3.zero;
-			forcefieldClone.transform.localPosition = new Vector3(0.27f, 0.67f,0);
+			crosshair.SetActive(true);
+			GameObject.FindGameObjectWithTag("Player").GetComponent<shooting>().specialshooting = true;
+			PlayerPrefs.SetString("gun", "false");
+
+		}  
+	}
+	public void enableMeteor()
+	{
+		if (PlayerPrefs.GetString("meteor") == "true")
+		{
+			PlayerPrefs.SetString("meteor", "false");
+			GameObject clone = Instantiate(meteor, new Vector3(-13.5f, 18.5f, 0), Quaternion.identity);
+			Destroy(clone, 12);
 
 		}
+	}
+	public void enablebomb()
+	{
+		if (PlayerPrefs.GetString("bomb") == "true")
+		{
+			PlayerPrefs.SetString("bomb", "false");
+
+		}
+	}
+	public void enableSonicboom()
+	{
+		if (PlayerPrefs.GetString("sonic boom") == "true")
+		{
+			PlayerPrefs.SetString("sonic boom", "false");
+
+		}
+	}
+	public void enableMinions()
+	{
 		if (PlayerPrefs.GetString("minion") == "true")
 		{
 			PlayerPrefs.SetString("minion", "false");
@@ -62,25 +85,27 @@ public class gamemanager : MonoBehaviour
 			minionClone.transform.localPosition = new Vector3(0.78f, -0.14f, 0);
 
 		}
-		if (PlayerPrefs.GetString("bomb") == "true")
+	}
+	public void enableForcefeild()
+	{
+		if (PlayerPrefs.GetString("force field") == "true")
 		{
-			PlayerPrefs.SetString("bomb", "false");
-
-		}
-		if (PlayerPrefs.GetString("gun") == "true")
-		{
-			crosshair.SetActive(true);
-			GameObject.FindGameObjectWithTag("Player").GetComponent<shooting>().specialshooting = true;
-			PlayerPrefs.SetString("gun", "false");
-
-		}
-		if (PlayerPrefs.GetString("sonic boom") == "true")
-		{
-			PlayerPrefs.SetString("sonic boom", "false");
+			PlayerPrefs.SetString("force field", "false");
+			GameObject forcefieldClone = Instantiate(forcefield);
+			Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+			forcefieldClone.transform.SetParent(player);
+			forcefieldClone.transform.localEulerAngles = Vector3.zero;
+			forcefieldClone.transform.localPosition = new Vector3(0.27f, 0.67f, 0);
 
 		}
 	}
-
+	
+        
+		
+		
+		
+		
+		
     public void updateMoney()
     {
 		moneyText.text = "$" + money.ToString();

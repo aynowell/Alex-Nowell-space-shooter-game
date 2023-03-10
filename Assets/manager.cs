@@ -23,7 +23,10 @@ public class manager : MonoBehaviour
     {
         
     }
+    public void givemoarmunney() {
 
+        PlayerPrefs.SetFloat("mula", PlayerPrefs.GetFloat("mula") + 1000);
+    }
     public void buymeteor(){
         PlayerPrefs.SetString("meteor","true");
     }
