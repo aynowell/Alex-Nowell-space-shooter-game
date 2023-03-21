@@ -26,7 +26,7 @@ public class gamemanager : MonoBehaviour
 	public GameObject forcefield;
 	public GameObject minion;
 	public GameObject bomb;
-	public GameObject gun;
+	//public GameObject gun;
 	public GameObject sonicboom;
 	public GameObject crosshair;
 
@@ -61,6 +61,7 @@ public class gamemanager : MonoBehaviour
 	{
 		if (PlayerPrefs.GetString("bomb") == "true")
 		{
+			GameObject clone = Instantiate(bomb);
 			PlayerPrefs.SetString("bomb", "false");
 
 		}
@@ -69,6 +70,12 @@ public class gamemanager : MonoBehaviour
 	{
 		if (PlayerPrefs.GetString("sonic boom") == "true")
 		{
+
+			GameObject clone = Instantiate(sonicboom);
+			Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+			clone.transform.SetParent(player);
+			clone.transform.localPosition = Vector3.zero;
+			clone.transform.SetParent(null);
 			PlayerPrefs.SetString("sonic boom", "false");
 
 		}
@@ -78,7 +85,7 @@ public class gamemanager : MonoBehaviour
 		if (PlayerPrefs.GetString("minion") == "true")
 		{
 			PlayerPrefs.SetString("minion", "false");
-			GameObject minionClone = Instantiate(forcefield);
+			GameObject minionClone = Instantiate(minion);
 			Transform player = GameObject.FindGameObjectWithTag("Player").transform;
 			minionClone.transform.SetParent(player);
 			minionClone.transform.localEulerAngles = Vector3.zero;

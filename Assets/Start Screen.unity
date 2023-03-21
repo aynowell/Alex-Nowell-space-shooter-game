@@ -1070,7 +1070,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Warning: If you press new game then you will loose your old game.'
+  m_text: 'Warning: If you press new game then you will loose your old game. Also
+    you can only buy 1 of each item in each round for the shop.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dbf4a2451ca397a47972be8eff0395e5, type: 2}
   m_sharedMaterial: {fileID: 6357968316824860053, guid: dbf4a2451ca397a47972be8eff0395e5, type: 2}
